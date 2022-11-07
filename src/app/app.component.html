@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="columns is-centered">
+    <div class="box column is-one-third">
+      <h1 class="title has-text-centered">Typing Challenge</h1>
+      <p class="has-text-centered">
+        <span [class]="compare(sign, userInput[i])"
+        *ngFor="let sign of randomText.split('');
+        let i = index;">{{ sign }}</span>
+      </p>
+      <div class="field">
+        <input class="input" (input)="onInput($event)" [readonly]="userInput === randomText" />
+      </div>
+      <div class="box has-text-centered" *ngIf="userInput === randomText">
+        <h2 class="title">Success!</h2>
+      </div>
+      <audio id="sound" src="http://www.w3schools.com/html/horse.ogg"></audio>
+      <button class="button" (click)="onBtnReload()">Reload</button>
+      <button class="button" (click)="stopSounds()" *ngIf="isSounds">Sounds Off</button>
+    </div>
+  </div>
+</div>

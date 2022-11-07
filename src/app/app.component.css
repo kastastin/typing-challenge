@@ -1,0 +1,25 @@
+:host {
+    height: 100vh;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p, input {
+    font-weight: 500;
+}
+
+.pending {
+    color: gray;
+}
+
+.correct {
+    color: green;
+    font-weight: 700;
+}
+ 
+.incorrect {
+    color: red;
+    font-weight: 900;
+}
